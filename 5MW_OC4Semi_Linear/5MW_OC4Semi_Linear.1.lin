@@ -1,0 +1,332 @@
+
+Linearized model: Predictions were generated on 31-Jan-2023 at 22:34:13 using OpenFAST, compiled as a 64-bit application using single precision at commit v3.2.1
+ linked with  NWTC Subroutine Library; ElastoDyn; ServoDyn; HydroDyn; MAP++ (<1.20.10>, <Aug-01-2022>)
+
+Description from the FAST input file: FAST Certification Test #25: NREL 5.0 MW Baseline Wind Turbine with OC4-DeepCwind semi configuration, for use in offshore analysis
+
+Simulation information:
+   Simulation time:                   120.0000 s
+   Rotor Speed:                         1.2544 rad/s
+   Azimuth:                             6.1251 rad
+   Wind Speed:                          0.0000 m/s
+   Number of continuous states:       138
+   Number of discrete states:           0
+   Number of constraint states:         0
+   Number of inputs:                    7
+   Number of outputs:                  15
+   Jacobians included in this file?    No
+
+Order of continuous states:
+   Row/Column Operating Point                     Rotating Frame? Derivative Order Description
+   ---------- ---------------                     --------------- ---------------- -----------
+          1   -2.651E-02                                 F               2         ED Platform horizontal surge translation DOF (internal DOF index = DOF_Sg), m
+          2    1.597E-04                                 F               2         ED Platform horizontal sway translation DOF (internal DOF index = DOF_Sw), m
+          3   -1.085E-03                                 F               2         ED Platform vertical heave translation DOF (internal DOF index = DOF_Hv), m
+          4   -1.447E-05                                 F               2         ED Platform roll tilt rotation DOF (internal DOF index = DOF_R), rad
+          5   -2.440E-03                                 F               2         ED Platform pitch tilt rotation DOF (internal DOF index = DOF_P), rad
+          6    5.469E-06                                 F               2         ED Platform yaw rotation DOF (internal DOF index = DOF_Y), rad
+          7   -2.179E-02                                 F               2         ED 1st tower fore-aft bending mode DOF (internal DOF index = DOF_TFA1), m
+          8    1.871E-04                                 F               2         ED 1st tower side-to-side bending mode DOF (internal DOF index = DOF_TSS1), m
+          9    4.157E-04                                 F               2         ED 2nd tower fore-aft bending mode DOF (internal DOF index = DOF_TFA2), m
+         10    3.179E-07                                 F               2         ED 2nd tower side-to-side bending mode DOF (internal DOF index = DOF_TSS2), m
+         11    2.951E-06                                 F               2         ED Nacelle yaw DOF (internal DOF index = DOF_Yaw), rad
+         12    4.554E+00                                 F               2         ED Variable speed generator DOF (internal DOF index = DOF_GeAz), rad
+         13   -7.394E-07                                 F               2         ED Drivetrain rotational-flexibility DOF (internal DOF index = DOF_DrTr), rad
+         14    3.086E-01                                 T               2         ED 1st flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,1)), m
+         15    6.802E-01                                 T               2         ED 1st flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,1)), m
+         16    2.112E-01                                 T               2         ED 1st flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,1)), m
+         17    1.081E-01                                 T               2         ED 1st edgewise bending-mode DOF of blade 1 (internal DOF index = DOF_BE(1,1)), m
+         18   -3.810E-01                                 T               2         ED 1st edgewise bending-mode DOF of blade 2 (internal DOF index = DOF_BE(2,1)), m
+         19    3.806E-01                                 T               2         ED 1st edgewise bending-mode DOF of blade 3 (internal DOF index = DOF_BE(3,1)), m
+         20   -1.662E-02                                 T               2         ED 2nd flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,2)), m
+         21   -9.067E-02                                 T               2         ED 2nd flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,2)), m
+         22    9.704E-03                                 T               2         ED 2nd flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,2)), m
+         23    2.567E-03                                 F               2         ED First time derivative of Platform horizontal surge translation DOF (internal DOF index = DOF_Sg), m/s
+         24   -3.886E-05                                 F               2         ED First time derivative of Platform horizontal sway translation DOF (internal DOF index = DOF_Sw), m/s
+         25    1.058E-03                                 F               2         ED First time derivative of Platform vertical heave translation DOF (internal DOF index = DOF_Hv), m/s
+         26    3.443E-06                                 F               2         ED First time derivative of Platform roll tilt rotation DOF (internal DOF index = DOF_R), rad/s
+         27    2.009E-04                                 F               2         ED First time derivative of Platform pitch tilt rotation DOF (internal DOF index = DOF_P), rad/s
+         28    3.356E-06                                 F               2         ED First time derivative of Platform yaw rotation DOF (internal DOF index = DOF_Y), rad/s
+         29    2.517E-03                                 F               2         ED First time derivative of 1st tower fore-aft bending mode DOF (internal DOF index = DOF_TFA1), m/s
+         30    4.117E-04                                 F               2         ED First time derivative of 1st tower side-to-side bending mode DOF (internal DOF index = DOF_TSS1), m/s
+         31   -5.132E-05                                 F               2         ED First time derivative of 2nd tower fore-aft bending mode DOF (internal DOF index = DOF_TFA2), m/s
+         32    2.502E-05                                 F               2         ED First time derivative of 2nd tower side-to-side bending mode DOF (internal DOF index = DOF_TSS2), m/s
+         33   -2.616E-05                                 F               2         ED First time derivative of Nacelle yaw DOF (internal DOF index = DOF_Yaw), rad/s
+         34    1.254E+00                                 F               2         ED First time derivative of Variable speed generator DOF (internal DOF index = DOF_GeAz), rad/s
+         35   -1.200E-05                                 F               2         ED First time derivative of Drivetrain rotational-flexibility DOF (internal DOF index = DOF_DrTr), rad/s
+         36    2.627E-01                                 T               2         ED First time derivative of 1st flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,1)), m/s
+         37   -2.611E-01                                 T               2         ED First time derivative of 1st flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,1)), m/s
+         38   -3.825E-01                                 T               2         ED First time derivative of 1st flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,1)), m/s
+         39   -5.116E-01                                 T               2         ED First time derivative of 1st edgewise bending-mode DOF of blade 1 (internal DOF index = DOF_BE(1,1)), m/s
+         40    1.562E-01                                 T               2         ED First time derivative of 1st edgewise bending-mode DOF of blade 2 (internal DOF index = DOF_BE(2,1)), m/s
+         41    3.314E-01                                 T               2         ED First time derivative of 1st edgewise bending-mode DOF of blade 3 (internal DOF index = DOF_BE(3,1)), m/s
+         42   -7.111E-02                                 T               2         ED First time derivative of 2nd flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,2)), m/s
+         43    1.371E-02                                 T               2         ED First time derivative of 2nd flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,2)), m/s
+         44    5.033E-02                                 T               2         ED First time derivative of 2nd flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,2)), m/s
+         45    0.000E+00                                 F               1         HD ExctnPtfmSg1
+         46    0.000E+00                                 F               1         HD ExctnPtfmSg2
+         47    0.000E+00                                 F               1         HD ExctnPtfmSg3
+         48    0.000E+00                                 F               1         HD ExctnPtfmSg4
+         49    0.000E+00                                 F               1         HD ExctnPtfmSg5
+         50    0.000E+00                                 F               1         HD ExctnPtfmSg6
+         51    0.000E+00                                 F               1         HD ExctnPtfmSg7
+         52    0.000E+00                                 F               1         HD ExctnPtfmSg8
+         53    0.000E+00                                 F               1         HD ExctnPtfmSw1
+         54    0.000E+00                                 F               1         HD ExctnPtfmSw2
+         55    0.000E+00                                 F               1         HD ExctnPtfmHv1
+         56    0.000E+00                                 F               1         HD ExctnPtfmHv2
+         57    0.000E+00                                 F               1         HD ExctnPtfmHv3
+         58    0.000E+00                                 F               1         HD ExctnPtfmHv4
+         59    0.000E+00                                 F               1         HD ExctnPtfmHv5
+         60    0.000E+00                                 F               1         HD ExctnPtfmHv6
+         61    0.000E+00                                 F               1         HD ExctnPtfmHv7
+         62    0.000E+00                                 F               1         HD ExctnPtfmHv8
+         63    0.000E+00                                 F               1         HD ExctnPtfmR1
+         64    0.000E+00                                 F               1         HD ExctnPtfmR2
+         65    0.000E+00                                 F               1         HD ExctnPtfmR3
+         66    0.000E+00                                 F               1         HD ExctnPtfmR4
+         67    0.000E+00                                 F               1         HD ExctnPtfmR5
+         68    0.000E+00                                 F               1         HD ExctnPtfmR6
+         69    0.000E+00                                 F               1         HD ExctnPtfmR7
+         70    0.000E+00                                 F               1         HD ExctnPtfmR8
+         71    0.000E+00                                 F               1         HD ExctnPtfmP1
+         72    0.000E+00                                 F               1         HD ExctnPtfmP2
+         73    0.000E+00                                 F               1         HD ExctnPtfmP3
+         74    0.000E+00                                 F               1         HD ExctnPtfmP4
+         75    0.000E+00                                 F               1         HD ExctnPtfmP5
+         76    0.000E+00                                 F               1         HD ExctnPtfmP6
+         77    0.000E+00                                 F               1         HD ExctnPtfmP7
+         78    0.000E+00                                 F               1         HD ExctnPtfmP8
+         79    0.000E+00                                 F               1         HD ExctnPtfmY1
+         80    0.000E+00                                 F               1         HD ExctnPtfmY2
+         81    1.762E-04                                 F               1         HD RdtnPtfmSg1
+         82    5.592E-05                                 F               1         HD RdtnPtfmSg2
+         83   -2.525E-05                                 F               1         HD RdtnPtfmSg3
+         84   -7.061E-05                                 F               1         HD RdtnPtfmSg4
+         85    7.785E-06                                 F               1         HD RdtnPtfmSg5
+         86    1.123E-03                                 F               1         HD RdtnPtfmSg6
+         87    1.030E-04                                 F               1         HD RdtnPtfmSg7
+         88    1.363E-04                                 F               1         HD RdtnPtfmSg8
+         89   -2.003E-04                                 F               1         HD RdtnPtfmSg9
+         90    1.479E-04                                 F               1         HD RdtnPtfmSg10
+         91    3.991E-03                                 F               1         HD RdtnPtfmSg11
+         92   -2.335E-03                                 F               1         HD RdtnPtfmSg12
+         93    8.757E-06                                 F               1         HD RdtnPtfmSw1
+         94    2.994E-06                                 F               1         HD RdtnPtfmSw2
+         95   -1.238E-06                                 F               1         HD RdtnPtfmSw3
+         96    5.493E-07                                 F               1         HD RdtnPtfmSw4
+         97    2.072E-07                                 F               1         HD RdtnPtfmSw5
+         98   -1.589E-05                                 F               1         HD RdtnPtfmSw6
+         99   -4.400E-06                                 F               1         HD RdtnPtfmSw7
+        100    7.699E-06                                 F               1         HD RdtnPtfmSw8
+        101    4.857E-06                                 F               1         HD RdtnPtfmSw9
+        102   -3.149E-06                                 F               1         HD RdtnPtfmSw10
+        103   -5.689E-05                                 F               1         HD RdtnPtfmSw11
+        104    2.113E-05                                 F               1         HD RdtnPtfmSw12
+        105   -3.613E-05                                 F               1         HD RdtnPtfmHv1
+        106   -6.183E-05                                 F               1         HD RdtnPtfmHv2
+        107    2.813E-04                                 F               1         HD RdtnPtfmHv3
+        108    4.439E-04                                 F               1         HD RdtnPtfmHv4
+        109   -2.159E-03                                 F               1         HD RdtnPtfmHv5
+        110   -3.307E-03                                 F               1         HD RdtnPtfmHv6
+        111    1.640E-02                                 F               1         HD RdtnPtfmHv7
+        112    2.526E-02                                 F               1         HD RdtnPtfmHv8
+        113   -1.655E-01                                 F               1         HD RdtnPtfmHv9
+        114   -4.516E-07                                 F               1         HD RdtnPtfmR1
+        115   -3.937E-07                                 F               1         HD RdtnPtfmR2
+        116    4.967E-07                                 F               1         HD RdtnPtfmR3
+        117    5.511E-06                                 F               1         HD RdtnPtfmR4
+        118   -5.996E-06                                 F               1         HD RdtnPtfmR5
+        119   -4.155E-07                                 F               1         HD RdtnPtfmR6
+        120   -3.737E-07                                 F               1         HD RdtnPtfmR7
+        121    2.646E-07                                 F               1         HD RdtnPtfmR8
+        122    5.032E-06                                 F               1         HD RdtnPtfmR9
+        123   -2.141E-06                                 F               1         HD RdtnPtfmR10
+        124    6.056E-06                                 F               1         HD RdtnPtfmP1
+        125   -2.010E-05                                 F               1         HD RdtnPtfmP2
+        126    3.005E-05                                 F               1         HD RdtnPtfmP3
+        127    3.625E-04                                 F               1         HD RdtnPtfmP4
+        128   -5.378E-04                                 F               1         HD RdtnPtfmP5
+        129    6.574E-06                                 F               1         HD RdtnPtfmP6
+        130   -1.834E-05                                 F               1         HD RdtnPtfmP7
+        131    1.397E-05                                 F               1         HD RdtnPtfmP8
+        132    3.347E-04                                 F               1         HD RdtnPtfmP9
+        133   -2.597E-04                                 F               1         HD RdtnPtfmP10
+        134   -2.326E-07                                 F               1         HD RdtnPtfmY1
+        135   -2.678E-08                                 F               1         HD RdtnPtfmY2
+        136    1.074E-07                                 F               1         HD RdtnPtfmY3
+        137    1.064E-07                                 F               1         HD RdtnPtfmY4
+        138    8.037E-07                                 F               1         HD RdtnPtfmY5
+
+Order of continuous state derivatives:
+   Row/Column Operating Point                     Rotating Frame? Derivative Order Description
+   ---------- ---------------                     --------------- ---------------- -----------
+          1    2.567E-03                                 F               2         First time derivative of ED Platform horizontal surge translation DOF (internal DOF index = DOF_Sg), m/s
+          2   -3.886E-05                                 F               2         First time derivative of ED Platform horizontal sway translation DOF (internal DOF index = DOF_Sw), m/s
+          3    1.058E-03                                 F               2         First time derivative of ED Platform vertical heave translation DOF (internal DOF index = DOF_Hv), m/s
+          4    3.443E-06                                 F               2         First time derivative of ED Platform roll tilt rotation DOF (internal DOF index = DOF_R), rad/s
+          5    2.009E-04                                 F               2         First time derivative of ED Platform pitch tilt rotation DOF (internal DOF index = DOF_P), rad/s
+          6    3.356E-06                                 F               2         First time derivative of ED Platform yaw rotation DOF (internal DOF index = DOF_Y), rad/s
+          7    2.517E-03                                 F               2         First time derivative of ED 1st tower fore-aft bending mode DOF (internal DOF index = DOF_TFA1), m/s
+          8    4.117E-04                                 F               2         First time derivative of ED 1st tower side-to-side bending mode DOF (internal DOF index = DOF_TSS1), m/s
+          9   -5.132E-05                                 F               2         First time derivative of ED 2nd tower fore-aft bending mode DOF (internal DOF index = DOF_TFA2), m/s
+         10    2.502E-05                                 F               2         First time derivative of ED 2nd tower side-to-side bending mode DOF (internal DOF index = DOF_TSS2), m/s
+         11   -2.616E-05                                 F               2         First time derivative of ED Nacelle yaw DOF (internal DOF index = DOF_Yaw), rad/s
+         12    1.254E+00                                 F               2         First time derivative of ED Variable speed generator DOF (internal DOF index = DOF_GeAz), rad/s
+         13   -1.200E-05                                 F               2         First time derivative of ED Drivetrain rotational-flexibility DOF (internal DOF index = DOF_DrTr), rad/s
+         14    2.627E-01                                 T               2         First time derivative of ED 1st flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,1)), m/s
+         15   -2.611E-01                                 T               2         First time derivative of ED 1st flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,1)), m/s
+         16   -3.825E-01                                 T               2         First time derivative of ED 1st flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,1)), m/s
+         17   -5.116E-01                                 T               2         First time derivative of ED 1st edgewise bending-mode DOF of blade 1 (internal DOF index = DOF_BE(1,1)), m/s
+         18    1.562E-01                                 T               2         First time derivative of ED 1st edgewise bending-mode DOF of blade 2 (internal DOF index = DOF_BE(2,1)), m/s
+         19    3.314E-01                                 T               2         First time derivative of ED 1st edgewise bending-mode DOF of blade 3 (internal DOF index = DOF_BE(3,1)), m/s
+         20   -7.111E-02                                 T               2         First time derivative of ED 2nd flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,2)), m/s
+         21    1.371E-02                                 T               2         First time derivative of ED 2nd flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,2)), m/s
+         22    5.033E-02                                 T               2         First time derivative of ED 2nd flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,2)), m/s
+         23   -4.616E-05                                 F               2         First time derivative of ED First time derivative of Platform horizontal surge translation DOF (internal DOF index = DOF_Sg), m/s/s
+         24   -1.009E-04                                 F               2         First time derivative of ED First time derivative of Platform horizontal sway translation DOF (internal DOF index = DOF_Sw), m/s/s
+         25   -1.031E-03                                 F               2         First time derivative of ED First time derivative of Platform vertical heave translation DOF (internal DOF index = DOF_Hv), m/s/s
+         26    5.294E-06                                 F               2         First time derivative of ED First time derivative of Platform roll tilt rotation DOF (internal DOF index = DOF_R), rad/s/s
+         27    2.120E-05                                 F               2         First time derivative of ED First time derivative of Platform pitch tilt rotation DOF (internal DOF index = DOF_P), rad/s/s
+         28    1.469E-06                                 F               2         First time derivative of ED First time derivative of Platform yaw rotation DOF (internal DOF index = DOF_Y), rad/s/s
+         29    8.936E-03                                 F               2         First time derivative of ED First time derivative of 1st tower fore-aft bending mode DOF (internal DOF index = DOF_TFA1), m/s/s
+         30   -3.980E-03                                 F               2         First time derivative of ED First time derivative of 1st tower side-to-side bending mode DOF (internal DOF index = DOF_TSS1), m/s/s
+         31   -1.980E-04                                 F               2         First time derivative of ED First time derivative of 2nd tower fore-aft bending mode DOF (internal DOF index = DOF_TFA2), m/s/s
+         32   -6.025E-05                                 F               2         First time derivative of ED First time derivative of 2nd tower side-to-side bending mode DOF (internal DOF index = DOF_TSS2), m/s/s
+         33    2.704E-05                                 F               2         First time derivative of ED First time derivative of Nacelle yaw DOF (internal DOF index = DOF_Yaw), rad/s/s
+         34   -2.795E-04                                 F               2         First time derivative of ED First time derivative of Variable speed generator DOF (internal DOF index = DOF_GeAz), rad/s/s
+         35    2.876E-05                                 F               2         First time derivative of ED First time derivative of Drivetrain rotational-flexibility DOF (internal DOF index = DOF_DrTr), rad/s/s
+         36    7.041E-01                                 T               2         First time derivative of ED First time derivative of 1st flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,1)), m/s/s
+         37   -1.107E-01                                 T               2         First time derivative of ED First time derivative of 1st flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,1)), m/s/s
+         38    8.150E-01                                 T               2         First time derivative of ED First time derivative of 1st flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,1)), m/s/s
+         39   -2.846E-01                                 T               2         First time derivative of ED First time derivative of 1st edgewise bending-mode DOF of blade 1 (internal DOF index = DOF_BE(1,1)), m/s/s
+         40    7.266E-01                                 T               2         First time derivative of ED First time derivative of 1st edgewise bending-mode DOF of blade 2 (internal DOF index = DOF_BE(2,1)), m/s/s
+         41   -3.473E-01                                 T               2         First time derivative of ED First time derivative of 1st edgewise bending-mode DOF of blade 3 (internal DOF index = DOF_BE(3,1)), m/s/s
+         42   -3.525E-02                                 T               2         First time derivative of ED First time derivative of 2nd flapwise bending-mode DOF of blade 1 (internal DOF index = DOF_BF(1,2)), m/s/s
+         43    1.074E-01                                 T               2         First time derivative of ED First time derivative of 2nd flapwise bending-mode DOF of blade 2 (internal DOF index = DOF_BF(2,2)), m/s/s
+         44   -4.565E-02                                 T               2         First time derivative of ED First time derivative of 2nd flapwise bending-mode DOF of blade 3 (internal DOF index = DOF_BF(3,2)), m/s/s
+         45    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg1/s
+         46    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg2/s
+         47    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg3/s
+         48    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg4/s
+         49    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg5/s
+         50    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg6/s
+         51    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg7/s
+         52    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSg8/s
+         53    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSw1/s
+         54    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmSw2/s
+         55    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv1/s
+         56    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv2/s
+         57    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv3/s
+         58    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv4/s
+         59    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv5/s
+         60    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv6/s
+         61    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv7/s
+         62    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmHv8/s
+         63    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR1/s
+         64    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR2/s
+         65    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR3/s
+         66    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR4/s
+         67    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR5/s
+         68    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR6/s
+         69    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR7/s
+         70    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmR8/s
+         71    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP1/s
+         72    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP2/s
+         73    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP3/s
+         74    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP4/s
+         75    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP5/s
+         76    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP6/s
+         77    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP7/s
+         78    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmP8/s
+         79    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmY1/s
+         80    0.000E+00                                 F               1         First time derivative of HD ExctnPtfmY2/s
+         81   -3.704E-04                                 F               1         First time derivative of HD RdtnPtfmSg1/s
+         82    1.762E-04                                 F               1         First time derivative of HD RdtnPtfmSg2/s
+         83    5.592E-05                                 F               1         First time derivative of HD RdtnPtfmSg3/s
+         84   -2.525E-05                                 F               1         First time derivative of HD RdtnPtfmSg4/s
+         85   -7.061E-05                                 F               1         First time derivative of HD RdtnPtfmSg5/s
+         86    7.785E-06                                 F               1         First time derivative of HD RdtnPtfmSg6/s
+         87    1.123E-03                                 F               1         First time derivative of HD RdtnPtfmSg7/s
+         88   -1.481E-04                                 F               1         First time derivative of HD RdtnPtfmSg8/s
+         89    1.363E-04                                 F               1         First time derivative of HD RdtnPtfmSg9/s
+         90   -2.003E-04                                 F               1         First time derivative of HD RdtnPtfmSg10/s
+         91    1.479E-04                                 F               1         First time derivative of HD RdtnPtfmSg11/s
+         92    3.991E-03                                 F               1         First time derivative of HD RdtnPtfmSg12/s
+         93   -2.050E-05                                 F               1         First time derivative of HD RdtnPtfmSw1/s
+         94    8.757E-06                                 F               1         First time derivative of HD RdtnPtfmSw2/s
+         95    2.994E-06                                 F               1         First time derivative of HD RdtnPtfmSw3/s
+         96   -1.238E-06                                 F               1         First time derivative of HD RdtnPtfmSw4/s
+         97    5.493E-07                                 F               1         First time derivative of HD RdtnPtfmSw5/s
+         98    2.072E-07                                 F               1         First time derivative of HD RdtnPtfmSw6/s
+         99   -1.589E-05                                 F               1         First time derivative of HD RdtnPtfmSw7/s
+        100   -9.293E-06                                 F               1         First time derivative of HD RdtnPtfmSw8/s
+        101    7.699E-06                                 F               1         First time derivative of HD RdtnPtfmSw9/s
+        102    4.857E-06                                 F               1         First time derivative of HD RdtnPtfmSw10/s
+        103   -3.149E-06                                 F               1         First time derivative of HD RdtnPtfmSw11/s
+        104   -5.689E-05                                 F               1         First time derivative of HD RdtnPtfmSw12/s
+        105    8.115E-06                                 F               1         First time derivative of HD RdtnPtfmHv1/s
+        106   -3.613E-05                                 F               1         First time derivative of HD RdtnPtfmHv2/s
+        107   -6.183E-05                                 F               1         First time derivative of HD RdtnPtfmHv3/s
+        108    2.813E-04                                 F               1         First time derivative of HD RdtnPtfmHv4/s
+        109    4.439E-04                                 F               1         First time derivative of HD RdtnPtfmHv5/s
+        110   -2.159E-03                                 F               1         First time derivative of HD RdtnPtfmHv6/s
+        111   -3.307E-03                                 F               1         First time derivative of HD RdtnPtfmHv7/s
+        112    1.640E-02                                 F               1         First time derivative of HD RdtnPtfmHv8/s
+        113    2.526E-02                                 F               1         First time derivative of HD RdtnPtfmHv9/s
+        114    4.946E-07                                 F               1         First time derivative of HD RdtnPtfmR1/s
+        115   -4.516E-07                                 F               1         First time derivative of HD RdtnPtfmR2/s
+        116   -3.937E-07                                 F               1         First time derivative of HD RdtnPtfmR3/s
+        117    4.967E-07                                 F               1         First time derivative of HD RdtnPtfmR4/s
+        118    5.511E-06                                 F               1         First time derivative of HD RdtnPtfmR5/s
+        119    5.445E-07                                 F               1         First time derivative of HD RdtnPtfmR6/s
+        120   -4.155E-07                                 F               1         First time derivative of HD RdtnPtfmR7/s
+        121   -3.737E-07                                 F               1         First time derivative of HD RdtnPtfmR8/s
+        122    2.646E-07                                 F               1         First time derivative of HD RdtnPtfmR9/s
+        123    5.032E-06                                 F               1         First time derivative of HD RdtnPtfmR10/s
+        124   -6.031E-06                                 F               1         First time derivative of HD RdtnPtfmP1/s
+        125    6.056E-06                                 F               1         First time derivative of HD RdtnPtfmP2/s
+        126   -2.010E-05                                 F               1         First time derivative of HD RdtnPtfmP3/s
+        127    3.005E-05                                 F               1         First time derivative of HD RdtnPtfmP4/s
+        128    3.625E-04                                 F               1         First time derivative of HD RdtnPtfmP5/s
+        129   -7.250E-06                                 F               1         First time derivative of HD RdtnPtfmP6/s
+        130    6.574E-06                                 F               1         First time derivative of HD RdtnPtfmP7/s
+        131   -1.834E-05                                 F               1         First time derivative of HD RdtnPtfmP8/s
+        132    1.397E-05                                 F               1         First time derivative of HD RdtnPtfmP9/s
+        133    3.347E-04                                 F               1         First time derivative of HD RdtnPtfmP10/s
+        134    6.871E-07                                 F               1         First time derivative of HD RdtnPtfmY1/s
+        135   -2.326E-07                                 F               1         First time derivative of HD RdtnPtfmY2/s
+        136   -2.678E-08                                 F               1         First time derivative of HD RdtnPtfmY3/s
+        137    1.074E-07                                 F               1         First time derivative of HD RdtnPtfmY4/s
+        138    1.064E-07                                 F               1         First time derivative of HD RdtnPtfmY5/s
+
+Order of inputs:
+     Column   Operating Point                     Rotating Frame? Derivative Order Description
+   ---------- ---------------                     --------------- ---------------- -----------
+          1    5.398E-02                                 T               0         ED Blade 1 pitch command, rad
+          2    5.398E-02                                 T               0         ED Blade 2 pitch command, rad
+          3    5.398E-02                                 T               0         ED Blade 3 pitch command, rad
+          4   -2.614E+04                                 F               0         ED Yaw moment, Nm
+          5    7.140E+00                                 F               0         ED Generator torque, Nm
+          6    5.398E-02                                 F               0         ED Extended input: collective blade-pitch command, rad
+          7    0.000E+00                                 F               0         HD Extended input: wave elevation at platform ref point, m
+
+Order of outputs:
+        Row   Operating Point                     Rotating Frame? Derivative Order Description
+   ---------- ---------------                     --------------- ---------------- -----------
+          1   -2.651E-02                                 F               0         ED PtfmSurge, (m)
+          2    1.597E-04                                 F               0         ED PtfmSway, (m)
+          3   -1.085E-03                                 F               0         ED PtfmHeave, (m)
+          4   -8.290E-04                                 F               0         ED PtfmRoll, (deg)
+          5   -1.398E-01                                 F               0         ED PtfmPitch, (deg)
+          6    3.133E-04                                 F               0         ED PtfmYaw, (deg)
+          7    2.614E+01                                 F               0         ED YawBrMzp, (kN-m)
+          8   -2.137E-02                                 F               0         ED TTDspFA, (m)
+          9    0.000E+00                                 F               0         HD Wave1Elev, (m)
+         10    1.108E+06                                 F               0         MAP T[1], [N]
+         11    6.520E+05                                 F               0         MAP T_a[1], [N]
+         12    1.106E+06                                 F               0         MAP T[2], [N]
+         13    6.496E+05                                 F               0         MAP T_a[2], [N]
+         14    1.108E+06                                 F               0         MAP T[3], [N]
+         15    6.520E+05                                 F               0         MAP T_a[3], [N]
+

@@ -1,0 +1,9 @@
+
+Predictions were generated on 13-Apr-2023 at 21:21:53 using OpenFAST, compiled as a 64-bit application using single precision at commit v3.2.1
+ linked with  NWTC Subroutine Library; ElastoDyn; InflowWind; ServoDyn; HydroDyn; MAP++ (<1.20.10>, <Aug-01-2022>)
+
+Description from the FAST input file: FAST Certification Test #25: NREL 5.0 MW Baseline Wind Turbine with OC4-DeepCwind semi configuration, for use in offshore analysis
+
+Time	Wind1VelX	Wind1VelY	Wind1VelZ	PtfmSurge	PtfmSway	PtfmHeave	PtfmRoll	PtfmPitch	PtfmYaw	YawBrMzp	TTDspFA	Wave1Elev	T[1]	T_a[1]	T[2]	T_a[2]	T[3]	T_a[3]
+(s)	(m/s)	(m/s)	(m/s)	(m)	(m)	(m)	(deg)	(deg)	(deg)	(kN-m)	(m)	(m)	[N]	[N]	[N]	[N]	[N]	[N]
+    0.0000	 9.000E+00	 0.000E+00	 0.000E+00	 0.000E+00	 0.000E+00	 0.000E+00	 0.000E+00	 0.000E+00	 0.000E+00	-1.347E-05	 0.000E+00	 0.000E+00	 1.107E+06	 6.512E+05	 1.107E+06	 6.512E+05	 1.107E+06	 6.512E+05
